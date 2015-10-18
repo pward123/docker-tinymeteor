@@ -25,3 +25,6 @@ done
 make
 
 mv ${buildroot_dir}/output/images/rootfs.tar ${docker_dir}
+
+docker build -t ${DOCKER_USER}/${imagename} Docker
+
