@@ -4,6 +4,7 @@ machine:
 
 dependencies:
   override:
+    - apt-get install -y bc
     - ./tinymeteor_build.sh
 
 test:
