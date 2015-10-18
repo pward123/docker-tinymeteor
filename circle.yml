@@ -1,0 +1,23 @@
+machine:
+ services:
+  - docker
+
+dependencies:
+  override:
+    - ./tinymeteor_build.sh
+
+test:
+  override:
+    - echo "Uncomment the line below to actually test."
+    #- npm test
+
+deployment:
+  release:
+    branch: /release[\.\/_\-\w]+/
+    commands:
+      - ./circle/push_to_docker.sh
+
+  dev:
+    branch: develop
+    commands:
+      - ./circle/push_to_docker.sh
