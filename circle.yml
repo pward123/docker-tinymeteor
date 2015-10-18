@@ -6,7 +6,7 @@ dependencies:
   override:
     - sudo apt-get install -y bc
     - ./tinymeteor_build.sh
-    - pushd Docker && docker build -t ddipward/tinymeteor && popd
+    - pushd Docker && docker build -t ddipward/tinymeteor . && popd
 
 test:
   override:
