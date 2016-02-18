@@ -18,7 +18,7 @@ fi
 if [[ -d "${buildroot_dir}/package/nodejs/0.10.40" ]]
 then
   echo "patching buildroot to support node 0.10.41"
-  patch -p1 -i ../node_0.10.41.patch -d buildroot-2015.11.1
+  patch -p1 -i ../node_0.10.41.patch -d "${buildroot_dir}"
 fi
 
 cp ./${imagename}_defconfig ${buildroot_dir}/configs/${imagename}_defconfig
