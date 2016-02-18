@@ -6,7 +6,7 @@ dependencies:
   override:
     - sudo apt-get install -y bc
     - ./tinymeteor_build.sh
-    - pushd Docker && docker build -t ddipward/tinymeteor . && popd
+    - pushd Docker && docker build -t tinymeteor . && popd
 
 test:
   override:
@@ -17,9 +17,4 @@ deployment:
   release:
     branch: /release[\.\/_\-\w]+/
     commands:
-      - ./circle/push_to_docker.sh
-
-  dev:
-    branch: develop
-    commands:
-      - ./circle/push_to_docker.sh
+      - ./circle/push_to_aws.sh
