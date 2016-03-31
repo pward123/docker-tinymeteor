@@ -739,7 +739,7 @@ BR2_PACKAGE_NODEJS_V8_ARCH_SUPPORTS=y
 BR2_BR2_PACKAGE_NODEJS_0_10_X=y
 # BR2_BR2_PACKAGE_NODEJS_0_12_X is not set
 # BR2_BR2_PACKAGE_NODEJS_4_X is not set
-BR2_PACKAGE_NODEJS_VERSION_STRING="0.10.41"
+BR2_PACKAGE_NODEJS_VERSION_STRING="0.10.43"
 
 #
 # Module Selection
@@ -1491,35 +1491,35 @@ BR2_PACKAGE_QEMU_ARCH_SUPPORTS_TARGET=y
 #
 
 #
-# Please note:                                           
+# Please note:
 #
 
 #
-# - Buildroot does *not* generate binary packages,       
+# - Buildroot does *not* generate binary packages,
 #
 
 #
-# - Buildroot does *not* install any package database.   
+# - Buildroot does *not* install any package database.
 #
 
 #
-# *                                                      
+# *
 #
 
 #
-# It is up to you to provide those by yourself if you    
+# It is up to you to provide those by yourself if you
 #
 
 #
-# want to use any of those package managers.             
+# want to use any of those package managers.
 #
 
 #
-# *                                                      
+# *
 #
 
 #
-# See the manual:                                        
+# See the manual:
 #
 
 #
