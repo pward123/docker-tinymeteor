@@ -1,0 +1,25 @@
+stages:
+  - build
+  - deploy
+
+# Build the docker image
+build:
+  stage: build
+  except:
+    - master
+  tags:
+    - shell
+  script:
+    - docker build -t tinymeteor-build ./build-container
+    - docker run --rm -v $(pwd)/target-container:/tmp/build/Docker tinymeteor-build.sh
+    - docker build -t tinymeteor ./target-container
+
+# Push the image to our aws bucket
+push_to_aws:
+  stage: deploy
+  except:
+    - master
+  tags:
+    - shell
+  script:
+    - ./deployment/push_to_aws.sh
